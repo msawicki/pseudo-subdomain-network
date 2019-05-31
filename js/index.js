@@ -6,6 +6,10 @@
 jQuery(document).ready( function($) {
 
 	// Unforunently, there's no hooks or filters so we need to "hack" this `tr` row into the table.
+	const table = $('.form-table').first().find('tr:nth-child(1)');
+	$('#psdn--tr-row').insertAfter(table);
+
+	// Unforunently, there's no hooks or filters so we need to "hack" this `tr` row into the table.
 	$('#psdn--tr-row').insertAfter('table.form-table tr:nth-child(1)');
 
 	// Wrapping the to-be-moved `tr` in a table keeps the browsers DOM happy, lets remove it now.
